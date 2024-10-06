@@ -1,379 +1,228 @@
-                                                                                                                                                                                                                                <!DOCTYPE html>
-                                                                                                                                                                                                                                <html lang="en">
-                                                                                                                                                                                                                                <head>
-                                                                                                                                                                                                                                    <meta charset="UTF-8">
-                                                                                                                                                                                                                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                                                                                                                                                                                                                    <title>The Best People in the World (discord.gg/byefron)</title>
-                                                                                                                                                                                                                                    <style>
-                                                                                                                                                                                                                                        body {
-                                                                                                                                                                                                                                            font-family: Arial, sans-serif;
-                                                                                                                                                                                                                                            background-color: #1e1e1e;
-                                                                                                                                                                                                                                            color: #f0f0f0;
-                                                                                                                                                                                                                                            display: flex;
-                                                                                                                                                                                                                                            flex-direction: column;
-                                                                                                                                                                                                                                            align-items: center;
-                                                                                                                                                                                                                                            justify-content: center;
-                                                                                                                                                                                                                                            min-height: 100vh;
-                                                                                                                                                                                                                                            margin: 0;
-                                                                                                                                                                                                                                            padding: 20px;
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                        h1 {
-                                                                                                                                                                                                                                            color: #4a90e2;
-                                                                                                                                                                                                                                            margin-bottom: 20px;
-                                                                                                                                                                                                                                            text-align: center;
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                        .gifs-container {
-                                                                                                                                                                                                                                            display: flex;
-                                                                                                                                                                                                                                            justify-content: center;
-                                                                                                                                                                                                                                            gap: 20px; /* Space between GIFs */
-                                                                                                                                                                                                                                            margin-bottom: 20px;
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                        .gif {
-                                                                                                                                                                                                                                            width: 300px; /* Set the width of each GIF */
-                                                                                                                                                                                                                                            height: auto; /* Maintain aspect ratio */
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                        .user-list {
-                                                                                                                                                                                                                                            list-style-type: none;
-                                                                                                                                                                                                                                            padding: 0;
-                                                                                                                                                                                                                                            text-align: center;
-                                                                                                                                                                                                                                            display: flex;
-                                                                                                                                                                                                                                            flex-wrap: wrap; /* Allows items to wrap into multiple lines */
-                                                                                                                                                                                                                                            justify-content: center; /* Center align items */
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                        .user-item {
-                                                                                                                                                                                                                                            background-color: #2c2c2c; /* Background color for user bubbles */
-                                                                                                                                                                                                                                            border-radius: 15px; /* Rounded corners */
-                                                                                                                                                                                                                                            padding: 15px; /* Inner spacing */
-                                                                                                                                                                                                                                            margin: 10px; /* Outer spacing */
-                                                                                                                                                                                                                                            width: 220px; /* Width of user bubbles */
-                                                                                                                                                                                                                                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-                                                                                                                                                                                                                                            transition: transform 0.2s; /* Smooth hover effect */
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                        .user-item:hover {
-                                                                                                                                                                                                                                            transform: scale(1.05); /* Slightly increase size on hover */
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                        .display-name {
-                                                                                                                                                                                                                                            font-size: 24px; /* Large font size for display names */
-                                                                                                                                                                                                                                            font-weight: bold;
-                                                                                                                                                                                                                                            color: #f39c12; /* Highlight color for display names */
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                        .username {
-                                                                                                                                                                                                                                            font-size: 18px; /* Smaller font size for usernames */
-                                                                                                                                                                                                                                            color: #bbb; /* Lighter color for usernames */
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                        /* Animation for the user "inposs" */
-                                                                                                                                                                                                                                        @keyframes rgbAnimation {
-                                                                                                                                                                                                                                            0% { color: red; }
-                                                                                                                                                                                                                                            20% { color: yellow; }
-                                                                                                                                                                                                                                            40% { color: green; }
-                                                                                                                                                                                                                                            60% { color: cyan; }
-                                                                                                                                                                                                                                            80% { color: blue; }
-                                                                                                                                                                                                                                            100% { color: magenta; }
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                        .highlight {
-                                                                                                                                                                                                                                            animation: rgbAnimation 1.5s infinite; /* Set animation for the display name */
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                        .default {
-                                                                                                                                                                                                                                            color: #a45ee2; /* Purple color for default users */
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                    </style>
-                                                                                                                                                                                                                                </head>
-                                                                                                                                                                                                                                <body>
-                                                                                                                                                                                                                                    <h1>The Best People in the World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .user-section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .user-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .user-item {
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background-color: #e0e0e0;
+            transition: background-color 0.3s;
+        }
+        .user-item:hover {
+            background-color: #d0d0d0;
+        }
+        .display-name {
+            font-weight: bold;
+        }
+        .rgb {
+            font-size: 24px;
+            background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 3s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .section-title {
+            font-size: 30px;
+            text-align: center;
+            margin: 20px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>User List</h1>
 
-                                                                                                                                                                                                                                    <div class="gifs-container">
-                                                                                                                                                                                                                                        <img src="https://c.tenor.com/t-HOHc_JCssAAAAd/tenor.gif" alt="GIF 1" class="gif">
-                                                                                                                                                                                                                                    </div>
+    <div class="user-section">
+        <div class="section-title">Sigma Section</div>
+        <ul class="user-list">
+            <li class="user-item">
+                <span class="display-name rgb">yapdollar</span>
+                <div class="username">@y.fun</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name rgb">inposs</span>
+                <div class="username">@progore843</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name rgb">Homelander</span>
+                <div class="username">@ankha_enthusiast</div>
+            </li>
+        </ul>
+    </div>
 
-                                                                                                                                                                                                                                    <ul class="user-list">
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name highlight">inposs (owner)</span>
-                                                                                                                                                                                                                                            <div class="username">@progore843</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">yapdollar</span>
-                                                                                                                                                                                                                                            <div class="username">@y.fun</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">lordo</span>
-                                                                                                                                                                                                                                            <div class="username">@lordofgg</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">saint</span>
-                                                                                                                                                                                                                                            <div class="username">@saintavrox</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">𒉭</span>
-                                                                                                                                                                                                                                            <div class="username">@mint103</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Reese's puffs</span>
-                                                                                                                                                                                                                                            <div class="username">👽 @reesespuffs7819</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">basdfllll</span>
-                                                                                                                                                                                                                                            <div class="username">@basdfllll</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Who</span>
-                                                                                                                                                                                                                                            <div class="username">@unwantedcircus</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">unrequited</span>
-                                                                                                                                                                                                                                            <div class="username">@delightfullybored</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">JackingJumpingJason69</span>
-                                                                                                                                                                                                                                            <div class="username">@jackingjumpingjason69_156</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">outposs</span>
-                                                                                                                                                                                                                                            <div class="username">@qgdx</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">habibi</span>
-                                                                                                                                                                                                                                            <div class="username">@5mkb</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">chainidk</span>
-                                                                                                                                                                                                                                            <div class="username">@mdn1975</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Homelander, Ally of Trans</span>
-                                                                                                                                                                                                                                            <div class="username">@ankha_enthusiast</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">cheeseburger</span>
-                                                                                                                                                                                                                                            <div class="username">@dudeimindiscrd_05764</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Wisdom Walter</span>
-                                                                                                                                                                                                                                            <div class="username">@ok92881</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">A1X3</span>
-                                                                                                                                                                                                                                            <div class="username">@alazhinyo</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">rightposs</span>
-                                                                                                                                                                                                                                            <div class="username">@ethyn___</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">naoko-tan</span>
-                                                                                                                                                                                                                                            <div class="username">@vitaenby03</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Insert name</span>
-                                                                                                                                                                                                                                            <div class="username">@insertname212</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">nilson</span>
-                                                                                                                                                                                                                                            <div class="username">@middleposs</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">presedige</span>
-                                                                                                                                                                                                                                            <div class="username">@presedige</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">kuno</span>
-                                                                                                                                                                                                                                            <div class="username">@kunokumo</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">spooky bob</span>
-                                                                                                                                                                                                                                            <div class="username">@micros87</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">fibsh</span>
-                                                                                                                                                                                                                                            <div class="username">@fibshmann</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">the freaky jonkler</span>
-                                                                                                                                                                                                                                            <div class="username">@ting_jam</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">348erogorp</span>
-                                                                                                                                                                                                                                            <div class="username">@tewmate.</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">winmaza</span>
-                                                                                                                                                                                                                                            <div class="username">@winmaza</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">LOVE EVERYONE</span>
-                                                                                                                                                                                                                                            <div class="username">@ttrunk</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">! std::cout << "dhza\\n";</span>
-                                                                                                                                                                                                                                            <div class="username">@dhzao</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Umessi150</span>
-                                                                                                                                                                                                                                            <div class="username">@umessi150</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">swag12</span>
-                                                                                                                                                                                                                                            <div class="username">@kmsto</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">mina</span>
-                                                                                                                                                                                                                                            <div class="username">@awurvies</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">drew</span>
-                                                                                                                                                                                                                                            <div class="username">@drkw</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Phasarius</span>
-                                                                                                                                                                                                                                            <div class="username">@phasarius</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">goobie</span>
-                                                                                                                                                                                                                                            <div class="username">@unihearts0190</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Josh</span>
-                                                                                                                                                                                                                                            <div class="username">@legodudejosh</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">tatortot</span>
-                                                                                                                                                                                                                                            <div class="username">@tatortot7793</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Pancho</span>
-                                                                                                                                                                                                                                            <div class="username">@pancho7225</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">J</span>
-                                                                                                                                                                                                                                            <div class="username">@panck22</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">stawy</span>
-                                                                                                                                                                                                                                            <div class="username">@wvq.</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Its Jayy</span>
-                                                                                                                                                                                                                                            <div class="username">@voxeo</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">KamiGames</span>
-                                                                                                                                                                                                                                            <div class="username">@kamigames</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Floppazz34</span>
-                                                                                                                                                                                                                                            <div class="username">@floppazz</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">youallaretrolled</span>
-                                                                                                                                                                                                                                            <div class="username">@youallaretrolled</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">a mince_meat_man</span>
-                                                                                                                                                                                                                                            <div class="username">@rismoo</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">fartnugget39</span>
-                                                                                                                                                                                                                                            <div class="username">@simple</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">simple</span>
-                                                                                                                                                                                                                                            <div class="username">@simple9084</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">drouxy</span>
-                                                                                                                                                                                                                                            <div class="username">@dro.u.zy</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">𝔪𝔞𝔡</span>
-                                                                                                                                                                                                                                            <div class="username">@starz0ne</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">sigmacancerballs123</span>
-                                                                                                                                                                                                                                            <div class="username">@trashripper.</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">voov</span>
-                                                                                                                                                                                                                                            <div class="username">@ethnwinters</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">rightposs</span>
-                                                                                                                                                                                                                                            <div class="username">@rightposs</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">a_s_t_r_o_v_e_x</span>
-                                                                                                                                                                                                                                            <div class="username">@52</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">piptytwo</span>
-                                                                                                                                                                                                                                            <div class="username">@alex297</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">alex297</span>
-                                                                                                                                                                                                                                            <div class="username">@alex297</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Yavi</span>
-                                                                                                                                                                                                                                            <div class="username">@yavi.com</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">hải phong</span>
-                                                                                                                                                                                                                                            <div class="username">@wizardguy95</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Arnas</span>
-                                                                                                                                                                                                                                            <div class="username">@lithuanianboy</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">𝔼𝕧𝕚𝕝</span>
-                                                                                                                                                                                                                                            <div class="username">@bollar☦</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">bollar_</span>
-                                                                                                                                                                                                                                            <div class="username">@ello_people</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">ello_people</span>
-                                                                                                                                                                                                                                            <div class="username">@ello_people.</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">AFunnyEngineer</span>
-                                                                                                                                                                                                                                            <div class="username">@afunnyengineer_19754</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Momma Piscio Sul Letto</span>
-                                                                                                                                                                                                                                            <div class="username">@mommapiscio</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">1Dumb_prson</span>
-                                                                                                                                                                                                                                            <div class="username">@1_dumb_prson</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">vini</span>
-                                                                                                                                                                                                                                            <div class="username">@viniccius_</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">Mat</span>
-                                                                                                                                                                                                                                            <div class="username">@mat1593</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">sprazor</span>
-                                                                                                                                                                                                                                            <div class="username">@frostii0048</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">𝘋𝘙𝘈</span>
-                                                                                                                                                                                                                                            <div class="username">@dra7106</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">idk</span>
-                                                                                                                                                                                                                                            <div class="username">@consumerofplutonium</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">maim</span>
-                                                                                                                                                                                                                                            <div class="username">@cavenbound</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                        <li class="user-item">
-                                                                                                                                                                                                                                            <span class="display-name default">MysticViper09</span>
-                                                                                                                                                                                                                                            <div class="username">@mysticviper09</div>
-                                                                                                                                                                                                                                        </li>
-                                                                                                                                                                                                                                    </ul>
-                                                                                                                                                                                                                                </body>
-                                                                                                                                                                                                                                </html>
+    <div class="user-section">
+        <div class="section-title">Real 1's Section</div>
+        <ul class="user-list">
+            <li class="user-item">
+                <span class="display-name">lordo</span>
+                <div class="username">@lordofgg</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">saint</span>
+                <div class="username">@saintavrox</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">𒉭</span>
+                <div class="username">@mint103</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">Reese's puffs</span>
+                <div class="username">@reesespuffs7819</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">basdfllll</span>
+                <div class="username">@basdfllll</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">Who</span>
+                <div class="username">@unwantedcircus</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">unrequited</span>
+                <div class="username">@delightfullybored</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">JackingJumpingJason69</span>
+                <div class="username">@jackingjumpingjason69_156</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">outposs</span>
+                <div class="username">@qgdx</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">habibi</span>
+                <div class="username">@5mkb</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">chainidk</span>
+                <div class="username">@chainidk</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">mdn1975</span>
+                <div class="username">@mdn1975</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">cheeseburger</span>
+                <div class="username">@dudeimindiscrd_05764</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">Wisdom Walter</span>
+                <div class="username">@ok92881</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">A1X3 [ --- 8 -=- ]</span>
+                <div class="username">@alazhinyo</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">rightposs</span>
+                <div class="username">@ethyn___</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">naoko-tan :3</span>
+                <div class="username">@vitaenby03</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">Insert name</span>
+                <div class="username">@insertname212</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">nilson</span>
+                <div class="username">@middleposs</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">presedige</span>
+                <div class="username">@presedige</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">kuno</span>
+                <div class="username">@kunokumo</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">spooky bob</span>
+                <div class="username">@micros87</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">fibsh</span>
+                <div class="username">@fibshmann</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">the freaky jonkler</span>
+                <div class="username">@ting_jam</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">348erogorp</span>
+                <div class="username">@tewmate.</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">winmaza</span>
+                <div class="username">@winmaza</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">LOVE EVERYONE</span>
+                <div class="username">@ttrunk</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">! std::cout << "dhza\n";</span>
+                <div class="username">@dhzao</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">Umessi150</span>
+                <div class="username">@umessi150</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">swag12</span>
+                <div class="username">@kmsto</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">mina</span>
+                <div class="username">@awurvies</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">drew</span>
+                <div class="username">@drkw</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">Phasarius</span>
+                <div class="username">@phasarius</div>
+            </li>
+            <li class="user-item">
+                <span class="display-name">Moonik</span>
+                <div class="username">@moonikie</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
