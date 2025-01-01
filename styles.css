@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+body.dark {
+    background-color: #181818;
+    color: #fff;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+header h1 {
+    font-size: 2rem;
+}
+button {
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+main {
+    margin-top: 20px;
+}
+form label,
+textarea,
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+textarea {
+    resize: vertical;
+}
+.forums {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.forum-link {
+    text-decoration: none;
+    color: #000;
+}
+.forum-link:hover {
+    color: #007bff;
+}
+.forum-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
